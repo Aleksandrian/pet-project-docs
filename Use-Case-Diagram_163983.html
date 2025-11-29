@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Александр Бобко : Use Case Diagram</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Александр Бобко</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="163923.html">Обзор</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Project-Bobko_229394.html">Project Bobko</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Diagram_360458.html">Diagram</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Александр Бобко : Use Case Diagram
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                            
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Александр Бобко</span> on нояб. 29, 2025
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p><a class="external-link" href="https://drive.google.com/file/d/18nwvXquOgpDoe3q5swkTvvHYGDYq-4RF/view" rel="nofollow">Use Case Diagram</a></p><div class="table-wrap"><table data-table-width="760" data-layout="default" data-local-id="47d8897c-1770-43bc-b786-85a5604bf554" class="confluenceTable"><colgroup><col style="width: 262.0px;"/><col style="width: 497.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Use case element</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><strong>Assumptions</strong></p></td><td class="confluenceTd"><p>1.Користувач вже авторизований у додатку і має доступ до свого акаунта</p><ol start="2"><li><p>Користувач має дійсний спосіб оплати</p></li></ol><p>3.Квиток успішно заброньований, і дані бронювання збережені в системі.</p><p>4.Платіжний шлюз працює коректно.</p></td></tr><tr><td class="confluenceTd"><p><strong>Description</strong></p></td><td class="confluenceTd"><p>Сценарій описує процес оплати авіаквитка, заброньованого користувачем у додатку. Після вибору квитка та підтвердження бронювання користувач переходить до оплати. Додаток пропонує різні способи оплати (банківська карта, мобільні платежі) і збирає необхідні платіжні дані. Після введення та підтвердження даних система надсилає їх до платіжного шлюзу для обробки транзакції. У разі успіху статус бронювання змінюється на &quot;оплачено&quot;, і користувач отримує електронний квиток. У разі помилки або відхилення оплати користувач інформується про проблему і має можливість повторити спробу.</p></td></tr><tr><td class="confluenceTd"><p><strong>Exceptions</strong></p></td><td class="confluenceTd"><ol start="1"><li><p>Невірно введені платіжні дані</p></li><li><p>Відхилення платежу через недостатню кількість коштів або іншу причину.</p></li><li><p>Втрата інтернет-з’єднання під час обробки оплати.</p></li><li><p>Збій на стороні платіжного шлюзу.</p></li><li><p>Користувач скасовує оплату або виходить із процесу.</p></li></ol></td></tr><tr><td class="confluenceTd"><p><strong>Main Flow</strong></p></td><td class="confluenceTd"><ol start="1"><li><p>Користувач вибирає квиток для бронювання.</p></li><li><p>Система пропонує користувачу перейти до оплати.</p></li><li><p>Користувач вибирає спосіб оплати (банківська карта, Apple Pay, Google Pay,WayForPay).</p></li><li><p>Система відображає форму введення платіжних даних.</p></li><li><p>Користувач вводить платіжні дані.</p></li><li><p>Користувач підтверджує оплату.</p></li><li><p>Система надсилає запит до платіжного шлюзу.</p></li><li><p>Платіжний шлюз обробляє запит</p></li><li><p>Якщо запит оброблено успішно: система оновлює статус бронювання на &quot;оплачено&quot;. Користувач отримує квиток на e-mail та в додатку.</p></li></ol></td></tr><tr><td class="confluenceTd"><p><strong>Postconditions</strong></p></td><td class="confluenceTd"><ol start="1"><li><p>У разі успіху: квиток оплачується, статус бронювання змінюється на &quot;оплачено&quot;, користувач отримує підтвердження та квиток відображається в розділі “Мої квитки”.</p></li><li><p>У разі помилки: квиток залишається заброньованим без зміни статусу, користувач може повторити спробу оплати.</p></li></ol></td></tr><tr><td class="confluenceTd"><p><strong>Preconditions</strong></p></td><td class="confluenceTd"><ol start="1"><li><p>Квиток успішно заброньований і готовий до оплати.</p></li><li><p>Підключення до інтернету стабільне.</p></li><li><p>Платіжний шлюз доступний.</p></li></ol></td></tr><tr><td class="confluenceTd"><p><strong>Alternative Flows</strong></p></td><td class="confluenceTd"><p>AF1: Користувач вибирає інший спосіб оплати (наприклад списання балів системи лояльності)</p><p>AF2: Користувач відмовляється від оплати</p><p /></td></tr></tbody></table></div>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on нояб. 29, 2025 21:44</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
